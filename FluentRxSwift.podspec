@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
 
   spec.source_files = 'Source/*.swift'
   
-  s.frameworks  = 'Foundation'
+  spec.frameworks  = 'Foundation'
   spec.dependency 'RxSwift', '~> 3.4.1'
   spec.dependency 'RxCocoa', '~> 3.4.1'
   
