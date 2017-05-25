@@ -3,4 +3,5 @@ use_frameworks!
 
 target 'FluentRxSwift' do
 	pod 'RxSwift'
+    pod 'RxCocoa'
 end

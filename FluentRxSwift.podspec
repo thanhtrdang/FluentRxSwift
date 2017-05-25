@@ -10,5 +10,9 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = '8.0'
 
   spec.source_files = 'Source/*.swift'
-
+  
+  s.frameworks  = 'Foundation'
+  spec.dependency 'RxSwift', '~> 3.4.1'
+  spec.dependency 'RxCocoa', '~> 3.4.1'
+  
 end
