@@ -184,6 +184,18 @@ extension RxKeyboard: UIGestureRecognizerDelegate {
     
 }
 
+// MARK: - UITextField -
+extension ControlPropertyType where E == String? {
+    public func asTextDriver(throttle: RxTimeInterval = 0.3, distinctUntilChanged: Bool = true) -> Driver<String> {
+        var driver = orEmpty.asDriver().throttle(throttle)
+        if distinctUntilChanged {
+           driver = driver.distinctUntilChanged()
+        }
+        
+        return driver
+    }
+}
+
 //MARK: - Data (Realm, SQLite, Firebase) -
 
 //MARK: - Network -
